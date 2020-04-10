@@ -1,0 +1,106 @@
+h1 {
+    font: bold 2em Helvetica, Arial;
+    color: orange;
+    background: rgba(76, 175, 80, 0.3);
+    text-align: center;
+}
+header {
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    color:white;
+}
+
+p {
+    font-weight: normal;
+}
+
+
+p.date {
+    font-style: italic;
+    color: grey;
+    display: inline;
+}
+
+section {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+
+.box1 {
+    background-color: lightblue;
+    border-left: 10px blue solid;
+    padding: 2em 1em;
+
+}
+
+.box2 {
+    background-color:rgb(226, 240, 226);
+    border-bottom: 3px solid green;
+    padding-top: 1em;
+    margin-top: 1em;
+
+}
+
+.box3 {
+    background:rgb(255, 249, 244) url(Oval.png) no-repeat right top;
+    border: dotted bisque;
+    border-left: solid darkturquoise;
+    border-width: 10px 20px;
+    padding: 5em;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+ul.circle {
+    list-style-image: url(horn.svg);
+}
+
+ol.roman {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+
+ul.square {
+    list-style-type: square;
+    text-indent: 1em;
+}
+
+a::before{
+    content: url(icon.svg);
+    padding-right: 0.5em;
+}
+
+a:link {
+    color: hotpink;
+    text-decoration: none;
+    margin: 2em;
+}
+
+a:visit {
+    color: indigo;
+}
+
+a:hover {
+    color: lightcoral;
+    text-decoration: underline;
+}
+
+a:active {
+    color: blue;
+}
+
+.sidebar {
+    width:20%;
+    background-color:rgb(36, 49, 167);
+    padding-top: 3em;
+}
+
+.container {
+    width: 80%;
+    padding: 2em;
+    border: 1px solid grey;
+}
