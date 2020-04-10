@@ -6,37 +6,96 @@
     <title>Day1</title>
     <style>
         h1 {
-            font-size: 2em;
-            color:orange;
-            font-family: Helvetica,Arial;
+            font: bold 2em Helvetica, Arial;
+            color: orange;
+            background: rgba(76, 175, 80, 0.3);
+            text-align: center;
         }
         header {
-            font-weight:bold;
-            font-size: 1.5em;
-            text-align:center;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
         }
 
         p {
-            font-weight:bold;
+            font-weight: normal;
         }
 
-        p.normal {
-            font-style:normal;
+
+        p.date {
+            font-style: italic;
+            color: grey;
+            display: inline;
         }
 
-        p.italic {
-            font-style:italic;
-            color:grey;
-        }
         section {
-            text-transform:uppercase;
+            font-size: 1.25em;
+            text-transform: uppercase;
             text-decoration: underline;
             letter-spacing: 2px;
         }
 
-        li {
-            text-indent: 50px;
+        .box1 {
+            background-color: lightblue;
+            border-left: 10px blue solid;
+            padding: 2em 1em;
+
         }
+
+        .box2 {
+            background-color:rgb(226, 240, 226);
+            border-bottom: 3px solid green;
+            padding-top: 1em;
+            margin-top: 1em;
+
+        }
+
+        .box3 {
+            background:rgb(255, 249, 244) url(Oval.png) no-repeat right top;
+            border: dotted bisque;
+            border-left: solid darkturquoise;
+            border-width: 10px 20px;
+            padding: 5em;
+        }
+
+        ul.circle {
+            list-style-image: url(horn.svg);
+        }
+
+        ol.roman {
+            list-style-type: upper-roman;
+            list-style-position: inside;
+        }
+
+        ul.square {
+            list-style-type: square;
+            text-indent: 1em;
+        }
+
+        a::before{
+            content: url(icon.svg);
+            padding-right: 0.5em;
+        }
+        
+        a:link {
+            color: hotpink;
+            text-decoration: none;
+            margin: 2em;
+        }
+
+        a:visit {
+            color: indigo;
+        }
+
+        a:hover {
+            color: lightcoral;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: blue;
+        }
+
 
         
     </style>
@@ -44,48 +103,63 @@
 </head>
 <body>
     <h1>Day 1</h1>
-    <ul>
-        <li>Create Github account</li>
-        <li>Download Visual Studio Code </li>
-        <li>Create my first Github repository</li>
-        <li>Set up GitHub Desktop</li>
-        <li>Write a website and publish</li>
-        <li>Create showcase bookmark folder to collect</li>
-    </ul>
+    <div class="box1">
+        <ul class="circle">
+            <li>Create Github account</li>
+            <li>Download Visual Studio Code </li>
+            <li>Create my first Github repository</li>
+            <li>Set up GitHub Desktop</li>
+            <li>Write a website and publish</li>
+            <li>Create showcase bookmark folder to collect</li>
+        </ul>
+    </div>
+
+    <div class="box2">
+        <ol class="roman">
+            <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant</li>
+            <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia </li>
+            <li>Coca Cola - A carbonated soft drink produced by The Coca-Cola Company. The drink's name refers to two of its original ingredients, which were kola nuts (a source of caffeine) and coca leaves</li>
+        </ol>
+    </div>
     
     <wbr>
 
     <h1>Day 2</h1>
-        <header>Lindsey Liao</header>
-        <header>User Experience Designer</header>
-        <section>Professional experience</section>
-        <p>Monash University - Associate User Experience Designer</p> <p class="italic">2019 - ongoing</p> 
-        <ul>
-            <li>Conduct user research</li>
-            <li>Conduct user testing</li>
-            <li>Create wireframe and userflow</li>
-            <li>Create UI design and handoff to devs</li>
-        </ul>
-        <p>KeyNinja - User Experience Designer</p> <p class="italic">Sep 2018 - Feb 2019</p>
-        <ul>
-            <li>Conduct user research</li>
-            <li>Conduct user testing</li>
-            <li>Create wireframe and userflow</li>
-            <li>Create UI design and handoff to devs</li>
-        </ul>
-
-        <section>Education</section>
-            <p>Academy Xi - UX design bootcamp</p> <p class="italic">Apr 2018 - Aug 2018</p>
-            <p>University of Melbourne - Master of Arts</p> <p class="italic">Feb 2016 - Aug 2018</p>
-            
-        <section>Tools</section>
-            <ul>
-                <li>Presentation Design</li>
-                <li>User Journey Mapping</li>
-                <li>User FLow</li>
-                <li>Sketch AdobeXD Figma</li>
-                <li>Html Css JavaScript</li>
+        <div class="box3">
+            <header>Lindsey Liao</header>
+            <header>User Experience Designer</header>
+            <a href="portfolio.com">Portfolio</a>
+            <a href="linkedin.com">Linkedin</a>
+            <a href="https://github.com/lindseyliao/front-end">GitHub</a>
+            <section>Professional experience</section>
+            <p>Monash University - <strong>Associate User Experience Designer</strong></p> <p class="date">2019 - ongoing</p> 
+            <ul class="square">
+                <li>Conduct user research</li>
+                <li>Conduct user testing</li>
+                <li>Create wireframe and userflow</li>
+                <li>Create UI design and handoff to devs</li>
             </ul>
+            <p>KeyNinja - <strong>User Experience Designer</strong></p> <p class="date">Sep 2018 - Feb 2019</p>
+            <ul class="square">
+                <li>Conduct user research</li>
+                <li>Conduct user testing</li>
+                <li>Create wireframe and userflow</li>
+                <li>Create UI design and handoff to devs</li>
+            </ul>
+
+            <section>Education</section>
+                <p>Academy Xi - <strong>UX design bootcamp</strong></p> <p class="date">Apr 2018 - Aug 2018</p>
+                <p>University of Melbourne - <strong>Master of Arts</strong></p> <p class="italic">Feb 2016 - Aug 2018</p>
+                
+            <section>Tools</section>
+                <ul class="square">
+                    <li>Presentation Design</li>
+                    <li>User Journey Mapping</li>
+                    <li>User FLow</li>
+                    <li>Sketch AdobeXD Figma</li>
+                    <li>Html Css JavaScript</li>
+                </ul>
+        </div>
 
 </body>
 </html>
