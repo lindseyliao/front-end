@@ -42,6 +42,7 @@ p.date {
     border-left: solid darkturquoise;
     border-width: 10px 20px;
     padding: 5em;
+    overflow: auto;
 }
 
 
@@ -96,12 +97,12 @@ a:active {
 }
 
 
-section {
+section { 
     font-size: 1.25em;
     text-transform: uppercase;
     text-decoration: underline;
     letter-spacing: 2px;
-    width:25%;
+    width:20%;
     background-color:rgb(204, 204, 204);
     display: flex;
     justify-content: center;
@@ -111,12 +112,12 @@ section {
 }
 
 .flexbox {
-    display:flex;
+    display: flex;
     flex-wrap: nowrap;
 }
 
 .right {
-    width: 75%;
+    width: 70%;
     background-color:#fff;
     padding:10px;
     border-bottom:1px solid rgb(204, 204, 204);

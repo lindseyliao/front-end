@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day7</title>
+    <style>
+        h1 {
+            font-size:1.25em;
+            font-family: HELVETICA, ARIAL;
+        }
+
+        p {
+            margin:0;
+        }
+
+        .container {
+            border:2px solid grey;
+            overflow: auto;
+            margin:20px;
+        }
+
+        .box-left {
+            height:50px;
+            background-color: purple;
+ 
+        }
+
+        .box-right {
+            height:50px;
+            background-color:skyblue;
+  
+        }
+
+        .box-middle {
+            height:50px;
+            background-color:darkseagreen;
+        }
+
+        .box-1 {
+            float:left;
+            width:30%;
+        }
+
+        .box-2 {
+            float:right;
+            width:70%;
+        }
+
+        .flexbox {
+            display:flex;
+            flex-wrap: nowrap;
+   
+        }
+        .box-3 {
+            width:30%;
+        }
+
+        .box-4 {
+            width:70%;
+        }
+
+        .box-5 {
+            position: absolute;
+            left:0;
+            width:30%
+        }
+
+        .box-6 {
+            position: absolute;
+            right:0;
+            width: 70%;
+        }
+
+        .box-7 {
+            float:left;
+            width:200px;
+        }
+
+        .box-8 {
+            float:right;
+            width: calc(100% - 200px);
+            /* widht :auto or 100% */
+        }
+
+        .box-9 {
+            flex-basis:200px;
+            flex-shrink: 0
+        }
+
+        .box-10 {
+            width:100%;
+        }
+
+        .box-11 {
+            float:right;
+            width:200px;
+        }
+
+        .box-12 {
+            float:left;
+            width: calc(100% - 200px);
+        }
+
+        .box-13 {
+            flex-basis:200px;
+            flex-shrink: 0
+        }
+
+        .box-14 {
+            width:90%;
+        }
+
+        .box-15 {
+            float:left;
+            width:200px;
+        }
+
+        .box-17 {
+            float:right;
+            width:200px;
+        }
+
+        .box-16 {
+            margin:0 200px;
+        }
+
+        .box-18, .box-20 {
+            flex-basis: 200px;
+            flex-shrink: 0;
+        }
+        
+        .box-19 {
+            width:100%;
+        }
+
+        .box-21 {
+            position: absolute; 
+            left: 0px;
+            width: 200px;
+        }
+
+        .box-22 {
+            margin: 0 210px;
+        }
+
+        .box-23 {
+            position: absolute;
+            right: 0px;
+            width: 200px;
+        }
+
+        #main {
+            width: 100%;
+            float: left;
+        }
+
+        #main .box-24 {
+            margin: 0 210px;
+        }
+
+        .box-25 {
+            width: 200px;
+            float: left;
+            margin-left: -100%;
+        }
+
+        .box-26 {
+            width: 200px;
+            float: left;
+            margin-left: -200px;
+        }
+     
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>2 columns 3/7 (float) </h1>
+    <div class="container">
+        <div class="box-left box-1">
+            <p>This is just some random </p>
+        </div>
+        <div class="box-right box-2"><p>This is just some random </p></div>
+    </div>
+
+
+    <h1>2 columns 3/7 (flexbox)</h1>
+    <div class="container flexbox">
+        <div class="box-left box-3"><p>This is just some random </p></div>
+        <div class="box-right box-4"><p>This is just some random </p></div>
+    </div>
+
+    <h1>2 columns fixed left, fluid right (float)</h1>
+    <div class="container">
+        <div class="box-left box-7"><p>This is just some random </p></div>
+        <div class="box-right box-8"><p>This is just some random </p></div>
+    </div>
+
+    <h1>2 columns fixed left, fluid right (flexbox)</h1>
+    <div class="container flexbox">
+        <div class="box-left box-9"><p>This is just some random </p></div>
+        <div class="box-right box-10"><p>This is just some random .</p></div>
+    </div>
+
+    <h1>2 columns fluid left, fixed right (float)</h1>
+    <div class="container">
+        <div class="box-left box-11"><p>This is just some random </p></div>
+        <div class="box-right box-12"><p>This is just some random </p></div>
+    </div>
+
+    <h1>2 columns fluid left, fixed right (flexbox)</h1>
+    <div class="container flexbox">
+        <div class="box-right box-14"><p>This is just some random</p></div>
+        <div class="box-left box-13"><p>This is just some random </p></div>
+    </div>
+
+    <h1>3 columns - fixed left & right, fluid middle (float)</h1>
+    <div class="container">
+        <div class="box-left box-15"><p>This is just some random </p></div>
+        <div class="box-right box-17"><p>This is just some random </p></div>
+        <div class="box-middle box-16"><p>This is just some random </p></div>
+        
+    </div>
+
+    <h1>3 columns - fixed left & right, fluid middle (flexbox)</h1>
+    <div class="container flexbox">
+        <div class="box-left box-18"><p>This is just some random </p></div>
+        <div class="box-middle box-19"><p>This is just some random </p></div>
+        <div class="box-right box-20"><p>This is just some random </p></div>
+    </div>
+
+    <h1>3 columns - fixed left & right, fluid middle (absolute position)</h1>
+    <div class="container in-line"> 
+        <div class="box-left box-21"><p>This is just some random </p></div>
+        <div class="box-middle box-22"><p>This is just some random </p></div>
+        <div class="box-right box-23"><p>This is just some random </p></div>
+   </div> 
+
+    <h1>3 columns - fixed left & right, fluid middle (negative margin)</h1>
+    <div class="container">
+        <div id="main">
+            <div class="box-middle box-24"><p>This is just some random </p></div>
+        </div>
+        <div class="box-left box-25"><p>This is just some random </p></div>
+        <div class="box-right box-26"><p>This is just some random </p></div>
+        </div>
+    </div>  
+
+</body>
+</html>
