@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Madeleine Rickard - ENG1009</title>
+    <style>
+        body {
+            background-color: #06172A;
+        }
+
+        h5 {
+            color:#fff;
+            font-family: Roboto;
+            font-weight:400;
+            text-align: center;
+            font-size:15px;
+            margin-top: 30px;
+            margin-bottom:40px;
+        }
+
+        img {
+            width:50%;
+            height:atuo;
+        }
+
+        .flexbox {
+            display:flex;
+        }
+
+        .icon {
+            height:48px;
+            width:48px;
+            margin-bottom:5px;
+        }
+
+        .icon:hover{
+            opacity:0.6;
+        }
+
+        h6 {
+            color:#fff;
+            font-family: Roboto;
+            font-weight:400;
+            font-size:15px;
+            margin:0px;
+        }
+
+        .container {
+            display:flex;
+            justify-content: space-between;
+            position:fixed;
+            bottom:0;
+            left:0;
+            right:0;
+            margin: 20px;
+        }
+
+        .center {
+            text-align: center;
+            margin:10px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .flagpanel {
+            position:fixed;
+            bottom:25px;
+            right:90px;
+            background-color: #fff;
+            visibility: hidden;
+            text-align: left;
+            padding:10px 30px 20px 30px;
+            font-family: Roboto;
+            line-height: 30px;
+            border: 1px solid darkgrey;
+            border-radius: 10px;
+        }
+
+        .popup, .popup2 {
+            cursor:pointer;
+        }
+
+        .popup .show{
+            visibility: visible;
+        }
+
+        .IDpanel {
+            position:fixed;
+            bottom:25px;
+            right:175px;
+            background-color: #fff;
+            visibility: hidden;
+            text-align: left;
+            padding:10px 30px 20px 30px;
+            font-family: Roboto;
+            border: 1px solid darkgrey;
+            border-radius: 10px;
+        }
+
+        .popup2 .show{
+            visibility: visible;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h5>ENG1009 - Computer Science (Madeleine Rickard)</h5>
+    <div class="flexbox">
+        <img src=img1.png>
+        <img src=img2.png>
+    </div>
+
+    <div class="container">
+        <div class="center">
+            <img class="icon" src=Audio.png>
+            <h6>End Session</h6>
+        </div>
+        <div class="main">
+            <div class="center">
+                <img class="icon" src=Microphone.png>
+                <h6>Mute</h6>
+            </div>
+            <div class="center">
+                <img class="icon" src=Video.png>
+                <h6>Stop Video</h6>
+            </div>
+        </div>
+        <div class="main">
+            <div class="center">
+                <div class="popup2" onclick="myFunction2()">
+                    <img class="icon" src=ID.png>
+                    <h6>Verification</h6>
+                    <div class="IDpanel" id="myPopup2">
+                        <p style="font-weight: 600; font-size: 16px;line-height: 30px;">Verification and Exam Gate</p>
+                        <a style="display:block; color:#0F70D7" href="">View eExam Rules</a>
+                        <p>Student information: </p>
+                        <p> &nbsp &nbsp Name: Madeleine Rickard</p>
+                        <p> &nbsp &nbsp ID: 23457890 </p>
+                        <a style="display:block; color:#0F70D7" href="">Open Exam Gate</a>
+                        <p><a style="display:block; color:#0F70D7" href="">Send Room Scan QR Code</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="center flag">
+                <div class="popup" onclick="myFunction()">
+                    <img class="icon" src=Flag.png>
+                    <h6>Flags</h6>
+                    <div class="flagpanel" id="myPopup">
+                        <p style="font-weight: 600; font-size: 16px; line-height:30px">Adding Flags</p>
+                        <a style="display:block;color:black" href="">Tech issue</a>
+                        <a style="display:block;color:black" href="">Health concern</a>
+                        <span>Toilet break &nbsp </span><a style="color:black" href="">Leave</a>&nbsp<a style="color:black" href="">Return</a>
+                        <a style="display:block;color:black" href="">Verification failed</a>
+                        <a style="display:block;color:black" href="">Breach rules</a>
+                        <a style="display:block;color:black" href="">Misconduct</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function myFunction() {
+          var popup = document.getElementById("myPopup");
+          popup.classList.toggle("show");
+        }
+
+        function myFunction2() {
+          var popup2 = document.getElementById("myPopup2");
+          popup2.classList.toggle("show");
+        }
+        </script>
+
+    
+</body>
+</html>

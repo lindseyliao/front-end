@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Madeleine Rickard - ENG1009</title>
+    <style>
+        body {
+            background-color: #06172A;
+        }
+
+        h5 {
+            color:#fff;
+            font-family: Roboto;
+            font-weight:400;
+            text-align: center;
+            font-size:15px;
+            margin-top: 10px;
+            margin-bottom:10px;
+        }
+
+
+        h6 {
+            color:#fff;
+            font-family: Roboto;
+            font-weight:400;
+            font-size:15px;
+            margin:0px;
+        }
+        
+        img {
+            max-width:100%;
+            max-height:100%;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0px;
+        }
+
+        .flexbox {
+            display:flex;
+            height:100%;
+        }
+
+        .box-left {
+            height:100%;
+            width:75%;
+        }
+
+        .box-left-up {
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .btn-end {
+            background-color: red;
+            padding:8px;
+            margin-left:10px;
+        }
+
+        .fixed-buttons {
+            position: fixed;
+            bottom:0px;
+            left:33%;
+        } 
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-mute {
+            text-align: center;
+        }
+
+
+        .icon {
+            height:48px;
+            width:48px;
+            margin:5px;
+        }
+
+        .icon:hover{
+            opacity:0.6;
+        }
+
+        .box-right {
+            background-color: #fff;
+            height:100%;
+            width:25%;
+            overflow-y:scroll;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .link {
+            color:#0F70D7;
+            text-decoration: underline;
+        }
+
+        .std-info {
+            color: black;
+        }
+
+        .flag, .info {
+            padding-left:15px;
+        }
+
+    
+
+    </style>
+</head>
+<body>
+    <div style="height:100%">
+    <div class="flexbox">
+
+    <div class= "box-left">
+
+        <div class= "box-left-up">
+            <div class="end-session">
+                <h6 class="btn-end">End session</h6>
+            </div>
+            <div class="page-title">
+                <h5>ENG1009 - Computer Science (Madeleine Rickard)</h5>
+            </div>
+            <div>
+            </div>
+        </div>
+        
+        <div class= "student-feed">
+            <img src=img1.png>
+        </div>
+
+        <div class="fixed-buttons">
+        <div class= "buttons">
+            <div class="btn-mute">
+                <img class="icon" src=Microphone.png>
+                <h6>Mute</h6>
+            </div>
+            <div class="btn-video">
+                <img class="icon" src=Video.png>
+                <h6>Stop Video</h6>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    <div class= "box-right">
+        <div class="screen-feed">
+            <img src=img2.png>
+        </div>
+        <div class="info">
+            <h6 class="link">View eExam Rules</h6>
+            <h6 class="std-info">Student information: </h6>
+            <h6 class="std-info"> &nbsp &nbsp Name: Madeleine Rickard</h6>
+            <h6 class="std-info"> &nbsp &nbsp ID: 23457890 </h6>
+            <h6 class="link">Open Exam Gate</h6>
+            <h6 class="link">Send Room Scan QR Code</h6>
+        </div>
+        <div class="flag">
+            <h6 style="color:black">Flagging panel</h6>
+            <h6 class="link">Tech issue</h6>
+            <h6 class="link">Health concern</h6>
+            <h6 class="link">Toilet break</h6>
+            <h6 class="link">Verification failed</h6>
+            <h6 class="link">Breach rules</h6>
+            <h6 class="link">Misconduct</h6>
+        </div>
+        
+    </div>
+</div>
+</div>
+
+    
+</body>
+</html>
