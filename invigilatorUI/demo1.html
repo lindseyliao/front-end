@@ -15,8 +15,8 @@
             font-weight:400;
             text-align: center;
             font-size:15px;
-            margin-top: 30px;
-            margin-bottom:40px;
+            margin-top: 12px;
+            margin-bottom:12px;
         }
 
         img {
@@ -24,8 +24,20 @@
             height:atuo;
         }
 
+        .face {
+            width:75%;
+            height: auto;
+        }
+
+        .screen {
+            width:25%;
+            height: auto;
+            align-self:flex-start;
+        }
+
         .flexbox {
             display:flex;
+
         }
 
         .icon {
@@ -42,7 +54,7 @@
             color:#fff;
             font-family: Roboto;
             font-weight:400;
-            font-size:15px;
+            font-size:13px;
             margin:0px;
         }
 
@@ -104,18 +116,42 @@
             visibility: visible;
         }
 
+        /* .box-left-up {
+            display:flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: baseline;
+        } */
+
+        .btn-end {
+            background-color: red;
+            padding:4px;
+            margin-left:10px;
+            float: left;
+        }
+
 
     </style>
 </head>
 <body>
-    <h5>ENG1009 - Computer Science (Madeleine Rickard)</h5>
+
+    <div class= "box-left-up">
+        <div class="end-session">
+            <h6 class="btn-end">End session</h6>
+        </div>
+        <div class="page-title">
+            <h5>ENG1009 - Computer Science (Madeleine Rickard)</h5>
+        </div>
+        <div>
+
     <div class="flexbox">
-        <img src=img1.png>
-        <img src=img2.png>
+        <img class="face" src=img1.png>
+        <img class="screen" src=img2.png>
     </div>
 
     <div class="container">
-        <div class="center">
+        <div style="visibility: hidden;" class="center">
             <img class="icon" src=Audio.png>
             <h6>End Session</h6>
         </div>
@@ -136,11 +172,11 @@
                     <h6>Verification</h6>
                     <div class="IDpanel" id="myPopup2">
                         <p style="font-weight: 600; font-size: 16px;line-height: 30px;">Verification and Exam Gate</p>
-                        <a style="display:block; color:#0F70D7" href="">View eExam Rules</a>
-                        <p>Student information: </p>
+                        <p><a style="display:block; color:#0F70D7" href="">View eExam Rules</a></p>
+                        <!-- <p>Student information: </p>
                         <p> &nbsp &nbsp Name: Madeleine Rickard</p>
-                        <p> &nbsp &nbsp ID: 23457890 </p>
-                        <a style="display:block; color:#0F70D7" href="">Open Exam Gate</a>
+                        <p> &nbsp &nbsp ID: 23457890 </p> -->
+                        <p><a style="display:block; color:#0F70D7" href="">Open Exam Gate</a></p>
                         <p><a style="display:block; color:#0F70D7" href="">Send Room Scan QR Code</a></p>
                     </div>
                 </div>
@@ -153,10 +189,10 @@
                         <p style="font-weight: 600; font-size: 16px; line-height:30px">Adding Flags</p>
                         <a style="display:block;color:black" href="">Tech issue</a>
                         <a style="display:block;color:black" href="">Health concern</a>
-                        <span>Toilet break &nbsp </span><a style="color:black" href="">Leave</a>&nbsp<a style="color:black" href="">Return</a>
+                        <a style="display:block;color:black" href="">Toilet break</a>
                         <a style="display:block;color:black" href="">Verification failed</a>
-                        <a style="display:block;color:black" href="">Breach rules</a>
-                        <a style="display:block;color:black" href="">Misconduct</a>
+                        <a style="display:block;color:black" href="">Yellow - Breach rules</a>
+                        <a style="display:block;color:black" href="">Red - Potential Misconduct</a>
                     </div>
                 </div>
             </div>

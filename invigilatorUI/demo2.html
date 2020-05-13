@@ -89,13 +89,13 @@
         }
 
         .box-right {
-            background-color: #fff;
+            /* background-color: #fff; */
             height:100%;
             width:25%;
             overflow-y:scroll;
             display:flex;
             flex-direction: column;
-            justify-content: space-between;
+         
         }
 
         .link {
@@ -109,6 +109,32 @@
 
         .flag, .info {
             padding-left:15px;
+        }
+
+        .info {
+            background-color: #fff;
+        }
+
+        .flagpanel {
+            position:fixed;
+            bottom:25px;
+            right:90px;
+            background-color: #fff;
+            visibility: hidden;
+            text-align: left;
+            padding:10px 30px 20px 30px;
+            font-family: Roboto;
+            line-height: 30px;
+            border: 1px solid darkgrey;
+            border-radius: 10px;
+        }
+
+        .popup,  {
+            cursor:pointer;
+        }
+
+        .popup .show{
+            visibility: visible;
         }
 
     
@@ -157,13 +183,13 @@
         </div>
         <div class="info">
             <h6 class="link">View eExam Rules</h6>
-            <h6 class="std-info">Student information: </h6>
+            <!-- <h6 class="std-info">Student information: </h6>
             <h6 class="std-info"> &nbsp &nbsp Name: Madeleine Rickard</h6>
-            <h6 class="std-info"> &nbsp &nbsp ID: 23457890 </h6>
+            <h6 class="std-info"> &nbsp &nbsp ID: 23457890 </h6> -->
             <h6 class="link">Open Exam Gate</h6>
             <h6 class="link">Send Room Scan QR Code</h6>
         </div>
-        <div class="flag">
+        <!-- <div class="flag">
             <h6 style="color:black; font-weight: 600">Flagging panel</h6>
             <h6 class="link">Tech issue</h6>
             <h6 class="link">Health concern</h6>
@@ -171,12 +197,33 @@
             <h6 class="link">Verification failed</h6>
             <h6 class="link">Breach rules</h6>
             <h6 class="link">Misconduct</h6>
+        </div> -->
+        <div class="center flag">
+            <div class="popup" onclick="myFunction()">
+                <img class="icon" src=Flag.png>
+                <h6>Flags</h6>
+                <div class="flagpanel" id="myPopup">
+                    <p style="font-weight: 600; font-size: 16px; line-height:30px">Adding Flags</p>
+                    <a style="display:block;color:black" href="">Tech issue</a>
+                    <a style="display:block;color:black" href="">Health concern</a>
+                    <span>Toilet break &nbsp </span><a style="color:black" href="">Leave</a>&nbsp<a style="color:black" href="">Return</a>
+                    <a style="display:block;color:black" href="">Verification failed</a>
+                    <a style="display:block;color:black" href="">Breach rules</a>
+                    <a style="display:block;color:black" href="">Misconduct</a>
+                </div>
+            </div>
         </div>
-        
+    </div>
     </div>
 </div>
 </div>
 
+<script>
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+    </script>
     
 </body>
 </html>
