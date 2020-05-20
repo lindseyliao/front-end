@@ -29,15 +29,20 @@
             height: auto;
         }
 
-        .screen {
+        .screenflag {
             width:25%;
             height: auto;
-            align-self:flex-start;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .screen {
+            width: 100%;
+            height: auto;
         }
 
         .flexbox {
             display:flex;
-
         }
 
         .icon {
@@ -59,13 +64,14 @@
         }
 
         .container {
-            display:flex;
-            justify-content: space-between;
             position:fixed;
             bottom:0;
             left:0;
             right:0;
-            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 75%;
         }
 
         .center {
@@ -73,22 +79,16 @@
             margin:10px;
         }
 
-        .main {
+        .mid {
             display: flex;
         }
 
         .flagpanel {
-            position:fixed;
-            bottom:25px;
-            right:90px;
             background-color: #fff;
-            visibility: hidden;
             text-align: left;
-            padding:10px 30px 20px 30px;
+            padding:5px 0px 10px 20px;
             font-family: Roboto;
-            line-height: 30px;
-            border: 1px solid darkgrey;
-            border-radius: 10px;
+            line-height: 25px;
         }
 
         .popup, .popup2 {
@@ -131,6 +131,16 @@
             float: left;
         }
 
+        /* .mid {
+            position: fixed;
+            left:35%;
+        }
+
+        .right {
+            position: fixed;
+            right:25%;
+        } */
+
 
     </style>
 </head>
@@ -147,15 +157,28 @@
 
     <div class="flexbox">
         <img class="face" src=img1.png>
-        <img class="screen" src=img2.png>
+        <div class="screenflag">
+            <img class="screen" src=img2.png>
+            <div class="flagpanel">
+                <p style="font-weight: 600; font-size: 16px; line-height:15px">Adding Flags</p>
+                        <a style="display:block;color:black" href="">Tech issue</a>
+                        <a style="display:block;color:black" href="">Health concern</a>
+                        <a style="display:block;color:black" href="">Toilet break</a>
+                        <a style="display:block;color:black" href="">Rest break</a>
+                        <a style="display:block;color:black" href="">Verification failed</a>
+                        <a style="display:block;color:black" href="">Yellow flag</a>
+                        <a style="display:block;color:black" href="">Red flag</a>
+            </div>
+        </div>
+        
     </div>
 
     <div class="container">
-        <div style="visibility: hidden;" class="center">
-            <img class="icon" src=Audio.png>
-            <h6>End Session</h6>
+        <div style="visibility: hidden;">
+            <img class="icon" src=Video.png>
+            <h6>Stop Video</h6>
         </div>
-        <div class="main">
+        <div class="mid">
             <div class="center">
                 <img class="icon" src=Microphone.png>
                 <h6>Mute</h6>
@@ -165,7 +188,7 @@
                 <h6>Stop Video</h6>
             </div>
         </div>
-        <div class="main">
+        <div class="right">
             <div class="center">
                 <div class="popup2" onclick="myFunction2()">
                     <img class="icon" src=ID.png>
@@ -173,27 +196,8 @@
                     <div class="IDpanel" id="myPopup2">
                         <p style="font-weight: 600; font-size: 16px;line-height: 30px;">Verification and Exam Gate</p>
                         <p><a style="display:block; color:#0F70D7" href="">View eExam Rules</a></p>
-                        <!-- <p>Student information: </p>
-                        <p> &nbsp &nbsp Name: Madeleine Rickard</p>
-                        <p> &nbsp &nbsp ID: 23457890 </p> -->
                         <p><a style="display:block; color:#0F70D7" href="">Open Exam Gate</a></p>
                         <p><a style="display:block; color:#0F70D7" href="">Send Room Scan QR Code</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="center flag">
-                <div class="popup" onclick="myFunction()">
-                    <img class="icon" src=Flag.png>
-                    <h6>Flags</h6>
-                    <div class="flagpanel" id="myPopup">
-                        <p style="font-weight: 600; font-size: 16px; line-height:15px">Adding Flags</p>
-                        <a style="display:block;color:black" href="">Tech issue</a>
-                        <a style="display:block;color:black" href="">Health concern</a>
-                        <a style="display:block;color:black" href="">Toilet break</a>
-                        <a style="display:block;color:black" href="">Rest break</a>
-                        <a style="display:block;color:black" href="">Verification failed</a>
-                        <a style="display:block;color:black" href="">Yellow - Breach rules</a>
-                        <a style="display:block;color:black" href="">Red - Potential Misconduct</a>
                     </div>
                 </div>
             </div>
@@ -206,10 +210,6 @@
           popup.classList.toggle("show");
         }
 
-        function myFunction2() {
-          var popup2 = document.getElementById("myPopup2");
-          popup2.classList.toggle("show");
-        }
         </script>
 
     
