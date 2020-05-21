@@ -43,6 +43,8 @@
 
         .flexbox {
             display:flex;
+            align-items: stretch;
+            background-color: #fff;
         }
 
         .icon {
@@ -61,6 +63,10 @@
             font-weight:400;
             font-size:13px;
             margin:0px;
+        }
+
+        a {
+            font-size:15px;
         }
 
         .container {
@@ -86,9 +92,9 @@
         .flagpanel {
             background-color: #fff;
             text-align: left;
-            padding:5px 0px 10px 20px;
+            padding:8px;
             font-family: Roboto;
-            line-height: 25px;
+            line-height: 30px;
         }
 
         .popup, .popup2 {
@@ -110,6 +116,7 @@
             font-family: Roboto;
             border: 1px solid darkgrey;
             border-radius: 10px;
+            justify-content: stretch;
         }
 
         .popup2 .show{
@@ -141,6 +148,27 @@
             right:25%;
         } */
 
+        .button {
+            font-size:16px;
+            padding: 5px;
+            margin-top: 20px;
+        }
+
+        .red {
+            border: 1px solid red;
+            color:red;
+        }
+
+        .yellow {
+            border: 1px solid orange;
+            color:orange;
+        }
+
+        .flags {
+            display:flex;
+            justify-content: space-between;
+        }
+
 
     </style>
 </head>
@@ -160,14 +188,15 @@
         <div class="screenflag">
             <img class="screen" src=img2.png>
             <div class="flagpanel">
-                <p style="font-weight: 600; font-size: 16px; line-height:15px">Adding Flags</p>
                 <a style="display:block;color:black" href="">Verification failed</a>
                 <a style="display:block;color:black" href="">Tech issue</a>
                 <a style="display:block;color:black" href="">Health concern</a>
                 <a style="display:block;color:black" href="">Toilet break</a>
                 <a style="display:block;color:black" href="">Rest break(AAA)</a>
-                <a style="display:block;color:black" href="">Yellow flag</a>
-                <a style="display:block;color:black" href="">Red flag</a>
+                <div class="flags">
+                    <button class="button yellow">Yellow flag</button>
+                    <button class="button red">Red flag</button>
+                </div>
             </div>
         </div>
         
